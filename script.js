@@ -1,6 +1,6 @@
 // begin with a function called computerPlay that will randomly return either ‘Rock’, ‘Paper’ or ‘Scissors’
 function computerPlay(){
-  let choice = Math.floor(Math.rand() * 3) + 1;
+  let choice = Math.floor(Math.random() * 3) + 1;
   // rock = 1; paper = 2; scissors = 3;
   // if choice === 1
   if (choice === 1){
