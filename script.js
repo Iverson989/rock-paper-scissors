@@ -24,23 +24,30 @@ function playRound(playerSelection, computerSelection) {
   // convert both params to lowercase
   let playerSelection1 = playerSelection.toLowerCase()
   let computerSelection1 = computerSelection.toLowerCase()
+  // declare win msg and loss msg
+  let tieMessage = `It's a Tie, try again!`
+  let winMessage = `You Win! ${playerSelection} beats ${computerSelection}`
+  let lossMessage = `You Lose! ${computerSelection} beats ${playerSelection}`
+  // if tie
+  if (playerSelection1 === computerSelection1)
+    return tieMessage;
   // if playerSelection = and computerSelection = 
   if (playerSelection1 === `rock` && computerSelection1 === `scissors`) {
-    // return `win`
-    return `win`
+    // return winMessage;
+    return winMessage;
   }
   // if playerSelection = and computerSelection =
   if (playerSelection1 === `scissors` && computerSelection1 === `paper`) {
-    // return `win`
-    return `win`
+    // return winMessage;
+    return winMessage;
   }
   // if playerSelection = and computerSelection =
   if (playerSelection1 === `paper` && computerSelection1 === `rock`) {
-    // return `win`
-    return `win`
+    // return winMessage;
+    return winMessage;
   }
   // return `lose`
-  return `lose`
+  return lossMessage;
 }
 
 // 
