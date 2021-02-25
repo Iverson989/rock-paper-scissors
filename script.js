@@ -85,5 +85,5 @@ function game() {
   } else {
     console.log(`IT WAS A TIE, PLAY AGAIN TO SETTLE THIS!!!\n${JSON.stringify(result)}`);
   }
-  return;
+  return `TO PLAY AGAIN: select console, then press UP ARROW and press ENTER`;
 }
