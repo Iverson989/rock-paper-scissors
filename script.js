@@ -6,15 +6,15 @@ function computerPlay(){
   // if choice === 1
   if (choice === 1){
     // return `rock`
-    return `rock`;
+    return `Rock`;
   // else if choice === 2
   } else if (choice === 2){
     // return `paper`
-    return `paper`;
+    return `Paper`;
   }
   // if choice is neither 1 or 2
   // return `scissors`
-  return `scissors`;
+  return `Scissors`;
 }
 
 // the function should take two parameters - the playerSelection and computerSelection 
