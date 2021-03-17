@@ -45,6 +45,7 @@ function playRound(playerSelection, computerSelection) {
   return `loss`;
 }
 
+
 // Write a function called game(). Use the previous function inside of this one to 
 // play a 5 round game that keeps score and reports a winner or loser at the end.
 // should use console.log() to display the results of each round and the winner at the end.
