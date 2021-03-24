@@ -5,22 +5,6 @@ html {
   justify-content: center;
 }
 
-body {
-  margin-top: 50vh;
-}
-
 .button {
   background-color: black;
-}
-
-#rock {
-  color: red;
-}
-
-#paper {
-  color: white;
-}
-
-#scissors {
-  color: rgb(78, 78, 255);
 }

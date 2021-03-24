@@ -2,6 +2,7 @@ document.body.style.display = "flex";
 document.body.style.justifyContent = "center";
 document.body.style.flexWrap = "wrap";
 document.body.style.width = "420px";
+document.body.style.marginTop = "50vh";
 
 function computerPlay() {
   let choice = Math.floor(Math.random() * 3) + 1;
@@ -63,8 +64,11 @@ document.body.appendChild(div);
 const scoreCard = document.querySelector("#score");
 
 rockButton.style.margin = "10px";
+rockButton.style.color = "red";
 paperButton.style.margin = "10px";
+paperButton.style.color = "white";
 scissorsButton.style.margin = "10px";
+scissorsButton.style.color = "dodgerblue";
 scoreCard.textContent = "Play 5 rounds to decide the Victor";
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
