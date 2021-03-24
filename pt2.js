@@ -26,25 +26,25 @@ function playRound(playerSelection, computerSelection) {
   return `loss`;
 }
 
-const rock = document.createElement("button");
+const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
 rock.className = "button";
 rock.setAttribute("id", "rock");
 document.body.appendChild(rock);
 
-const paper = document.createElement("button");
+const paper = document.createElement("BUTTON");
 paper.textContent = "Paper";
 paper.className = "button";
 paper.setAttribute("id", "paper");
 document.body.appendChild(paper);
 
-const scissors = document.createElement("button");
+const scissors = document.createElement("BUTTON");
 scissors.textContent = "Scissors";
 scissors.className = "button";
 scissors.setAttribute("id", "scissors");
 document.body.appendChild(scissors);
 
 const buttons = document.querySelectorAll(".button");
-const rockButton = document.querySelector("#rock");
-const paperButton = document.querySelector("#paper");
-const scissorsButton = document.querySelector("#scissors");
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
