@@ -53,7 +53,7 @@ const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
 
 rockButton.addEventListener("mousedown", () => {
-  playRound("rock", compChoice);
+  playRound(rockButton.textContent, compChoice);
 });
 
 paperButton.addEventListener("mousedown", () => {
@@ -61,5 +61,5 @@ paperButton.addEventListener("mousedown", () => {
 });
 
 scissorsButton.addEventListener("mousedown", () => {
-  playRound("scissors", compChoice);
+  playRound(scissorsButton.textContent, compChoice);
 });
