@@ -1,11 +1,11 @@
 function computerPlay() {
   let choice = Math.floor(Math.random() * 3) + 1;
   if (choice === 1) {
-    return `Rock`;
+    return "Rock";
   } else if (choice === 2) {
-    return `Paper`;
+    return "Paper";
   }
-  return `Scissors`;
+  return "Scissors";
 }
 
 let compChoice = computerPlay();
@@ -14,18 +14,18 @@ function playRound(playerSelection, computerSelection) {
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    alert(`tie`);
+    alert("tie");
   }
-  if (playerSelection1 === `rock` && computerSelection1 === `scissors`) {
-    alert(`win`);
+  if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
+    alert("win");
   }
-  if (playerSelection1 === `scissors` && computerSelection1 === `paper`) {
-    alert(`win`);
+  if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
+    alert("win");
   }
-  if (playerSelection1 === `paper` && computerSelection1 === `rock`) {
-    alert(`win`);
+  if (playerSelection1 === "paper" && computerSelection1 === "rock") {
+    alert("win");
   }
-  alert(`loss`);
+  alert("loss");
   return;
 }
 
@@ -63,3 +63,11 @@ paperButton.addEventListener("mousedown", () => {
 scissorsButton.addEventListener("mousedown", () => {
   playRound(scissorsButton.textContent, compChoice);
 });
+
+const div = document.createElement("div");
+div.setAttribute("id", "score");
+document.body.appendChild(div);
+const scoreCard = document.querySelector("#score");
+scoreCard.textContent = "";
+scoreCard.style.backgroundColor = "mistyrose";
+scoreCard.style.alignSelf = "flexend";

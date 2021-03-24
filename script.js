@@ -6,16 +6,16 @@ function computerPlay() {
   // rock = 1; paper = 2; scissors = 3;
   // if choice === 1
   if (choice === 1) {
-    // return `rock`
-    return `Rock`;
+    // return "rock"
+    return "Rock";
     // else if choice === 2
   } else if (choice === 2) {
-    // return `paper`
-    return `Paper`;
+    // return "paper"
+    return "Paper";
   }
   // if choice is neither 1 or 2
-  // return `scissors`
-  return `Scissors`;
+  // return "scissors"
+  return "Scissors";
 }
 
 // the function should take two parameters - the playerSelection and computerSelection
@@ -28,21 +28,21 @@ function playRound(playerSelection, computerSelection) {
   let computerSelection1 = computerSelection.toLowerCase();
   // if a tie
   if (playerSelection1 === computerSelection1) {
-    return `tie`;
+    return "tie";
   }
   // if playerSelection = and computerSelection =
-  if (playerSelection1 === `rock` && computerSelection1 === `scissors`) {
-    // return `win`;
-    return `win`;
+  if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
+    // return "win";
+    return "win";
   }
-  if (playerSelection1 === `scissors` && computerSelection1 === `paper`) {
-    return `win`;
+  if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
+    return "win";
   }
-  if (playerSelection1 === `paper` && computerSelection1 === `rock`) {
-    return `win`;
+  if (playerSelection1 === "paper" && computerSelection1 === "rock") {
+    return "win";
   }
-  // return `loss`
-  return `loss`;
+  // return "loss"
+  return "loss";
 }
 
 // Write a function called game(). Use the previous function inside of this one to
@@ -60,19 +60,19 @@ function game() {
   // log results of playRound to console at the end of each of the 5 iterations using a for loop,
   // use a new window.prompt for playerSelection each time
   for (var game = 0; game < 5; game++) {
-    let p1 = prompt(`What will you choose?`);
+    let p1 = prompt("What will you choose?");
     let roundResult = playRound(p1, computerPlay());
-    let tieMessage = `It's a Tie!`;
-    let winMessage = `You Win!`;
-    let lossMessage = `You Lose!`;
+    let tieMessage = "It's a Tie!";
+    let winMessage = "You Win!";
+    let lossMessage = "You Lose!";
     // use if to increment result counter
-    if (roundResult === `win`) {
+    if (roundResult === "win") {
       console.log(winMessage);
       result.win++;
-    } else if (roundResult === `loss`) {
+    } else if (roundResult === "loss") {
       console.log(lossMessage);
       result.loss += 1;
-    } else if (roundResult === `tie`) {
+    } else if (roundResult === "tie") {
       console.log(tieMessage);
       result.tie = result.tie + 1;
     }
@@ -87,5 +87,5 @@ function game() {
       `IT WAS A TIE, PLAY AGAIN TO SETTLE THIS!!!\n${JSON.stringify(result)}`
     );
   }
-  return `TO PLAY AGAIN: select console, then press UP ARROW and press ENTER`;
+  return "TO PLAY AGAIN: select console, then press UP ARROW and press ENTER";
 }
