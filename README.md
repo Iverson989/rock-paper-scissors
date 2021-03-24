@@ -1,4 +1,4 @@
-**_ Instructions for pt2 _**
+Instructions for pt2:
 Copy your original code into a new file so you don’t lose it. --complete
 
 For now, remove the logic that plays exactly five rounds. --complete
