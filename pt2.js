@@ -43,3 +43,8 @@ scissors.textContent = "Scissors";
 scissors.className = "button";
 scissors.setAttribute("id", "scissors");
 document.body.appendChild(scissors);
+
+const buttons = document.querySelectorAll(".button");
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
