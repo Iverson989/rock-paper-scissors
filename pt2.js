@@ -25,3 +25,21 @@ function playRound(playerSelection, computerSelection) {
   }
   return `loss`;
 }
+
+const rock = document.createElement("button");
+rock.textContent = "Rock";
+rock.className = "button";
+rock.setAttribute("id", "rock");
+document.body.appendChild(rock);
+
+const paper = document.createElement("button");
+paper.textContent = "Paper";
+paper.className = "button";
+paper.setAttribute("id", "paper");
+document.body.appendChild(paper);
+
+const scissors = document.createElement("button");
+scissors.textContent = "Scissors";
+scissors.className = "button";
+scissors.setAttribute("id", "scissors");
+document.body.appendChild(scissors);

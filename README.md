@@ -1,8 +1,8 @@
 Copy your original code into a new file so you don’t lose it. --complete
 
-For now, remove the logic that plays exactly five rounds.
+For now, remove the logic that plays exactly five rounds. --complete
 
-Create three buttons, one for each selection.
+Create three buttons, one for each selection. --complete
 
 Add an event listener to the buttons that calls your playRound function with the correct
 playerSelection every time a button is clicked. (you can keep the console.logs for this step)
