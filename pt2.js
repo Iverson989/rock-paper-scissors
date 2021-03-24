@@ -8,22 +8,25 @@ function computerPlay() {
   return `Scissors`;
 }
 
+let compChoice = computerPlay();
+
 function playRound(playerSelection, computerSelection) {
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    return `tie`;
+    alert(`tie`);
   }
   if (playerSelection1 === `rock` && computerSelection1 === `scissors`) {
-    return `win`;
+    alert(`win`);
   }
   if (playerSelection1 === `scissors` && computerSelection1 === `paper`) {
-    return `win`;
+    alert(`win`);
   }
   if (playerSelection1 === `paper` && computerSelection1 === `rock`) {
-    return `win`;
+    alert(`win`);
   }
-  return `loss`;
+  alert(`loss`);
+  return;
 }
 
 const rock = document.createElement("BUTTON");
@@ -48,3 +51,15 @@ const buttons = document.querySelectorAll(".button");
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById("paper");
 const scissorsButton = document.getElementById("scissors");
+
+rockButton.addEventListener("mousedown", () => {
+  playRound("rock", compChoice);
+});
+
+paperButton.addEventListener("mousedown", () => {
+  playRound(paperButton.textContent, compChoice);
+});
+
+scissorsButton.addEventListener("mousedown", () => {
+  playRound("scissors", compChoice);
+});
