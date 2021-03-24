@@ -1,8 +1,11 @@
-body {
+html {
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body {
   margin-top: 50vh;
 }
 
@@ -16,7 +19,6 @@ body {
 
 #paper {
   color: white;
-  margin: 20px;
 }
 
 #scissors {
