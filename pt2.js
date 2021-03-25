@@ -62,21 +62,21 @@ function playRound(playerSelection, computerSelection) {
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    alert("tie");
+    console.log("tie");
     return;
   }
   if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
-    alert("win");
+    console.log("win");
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
-    alert("win");
+    console.log("win");
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
-    alert("win");
+    console.log("win");
     return;
   }
-  alert("loss");
+  console.log("loss");
   return;
 }
