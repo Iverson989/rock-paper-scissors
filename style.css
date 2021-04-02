@@ -5,6 +5,10 @@ html {
   justify-content: center;
 }
 
+#h1 {
+  font-family: Bangers;
+}
+
 .button {
   background-color: black;
 }

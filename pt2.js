@@ -1,15 +1,16 @@
 document.body.style.display = "flex";
 document.body.style.justifyContent = "center";
 document.body.style.flexWrap = "wrap";
-document.body.style.width = "420px";
-document.body.style.marginTop = "50vh";
+document.body.style.width = "440px";
+document.body.style.marginTop = "10vh";
 
 const header1 = document.createElement("h1");
 header1.setAttribute("id", "h1");
 document.body.appendChild(header1);
 const h1 = document.querySelector("#h1");
-h1.textContent = "Rock, Paper, Scissors Arena";
+h1.textContent = "Rock, Paper, Scissors";
 h1.style.color = "red";
+h1.style.fontSize = "48px";
 
 const div = document.createElement("div");
 div.setAttribute("id", "score");
@@ -19,15 +20,15 @@ scoreCard.textContent = `"Play 5 rounds to decide the Victor`;
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 
-const form = document.createElement("form");
-form.setAttribute("id", "form");
-document.body.appendChild(form);
+const input = document.createElement("input");
+input.setAttribute("id", "input");
+document.body.appendChild(input);
 
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
 rock.className = "button";
 rock.setAttribute("id", "rock");
-document.getElementById("form").appendChild(rock);
+document.getElementById("input").appendChild(rock);
 const rockButton = document.getElementById("rock");
 rockButton.style.margin = "10px";
 rockButton.style.color = "red";
@@ -39,7 +40,7 @@ const paper = document.createElement("BUTTON");
 paper.textContent = "Paper";
 paper.className = "button";
 paper.setAttribute("id", "paper");
-document.getElementById("form").appendChild(paper);
+document.getElementById("input").appendChild(paper);
 const paperButton = document.getElementById("paper");
 paperButton.style.margin = "10px";
 paperButton.style.color = "white";
@@ -51,7 +52,7 @@ const scissors = document.createElement("BUTTON");
 scissors.textContent = "Scissors";
 scissors.className = "button";
 scissors.setAttribute("id", "scissors");
-document.getElementById("form").appendChild(scissors);
+document.getElementById("input").appendChild(scissors);
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
