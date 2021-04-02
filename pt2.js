@@ -8,15 +8,16 @@ const header1 = document.createElement("h1");
 header1.setAttribute("id", "h1");
 document.body.appendChild(header1);
 const h1 = document.querySelector("#h1");
-h1.textContent = "Rock, Paper, Scissors";
+h1.textContent = `Welcome to The RPS Arena!`;
 h1.style.color = "red";
 h1.style.fontSize = "48px";
+h1.style.textAlign = "center";
 
 const div = document.createElement("div");
 div.setAttribute("id", "score");
 document.body.appendChild(div);
 const scoreCard = document.querySelector("#score");
-scoreCard.textContent = `"Play 5 rounds to decide the Victor`;
+scoreCard.textContent = `Play 5 rounds to decide the Victor`;
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 

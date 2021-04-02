@@ -3,6 +3,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: FiraCode;
 }
 
 #h1 {
@@ -11,4 +12,7 @@ html {
 
 .button {
   background-color: black;
+  font-family: FiraCode;
+  font-weight: bold;
+  font-size: medium;
 }
