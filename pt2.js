@@ -17,13 +17,18 @@ const div = document.createElement("div");
 div.setAttribute("id", "score");
 document.body.appendChild(div);
 const scoreCard = document.querySelector("#score");
-scoreCard.textContent = `Play 5 rounds to decide the Victor`;
+scoreCard.textContent = "results of rounds go here";
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
+scoreCard.style.justifyContent = "center";
 
 const form = document.createElement("form");
 form.setAttribute("id", "form");
 document.body.appendChild(form);
+const bForm = document.querySelector("#form");
+bForm.style.width = "500px";
+bForm.style.display = "flex";
+bForm.style.justifyContent = "center";
 
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
@@ -71,25 +76,29 @@ function computerPlay() {
   return "Scissors";
 }
 
+let winMsg = "You've Won this Round!";
+let lossMsg = "You Lost this Round!";
+let tieMsg = "It's a Tie, no points awarded!";
 function playRound(playerSelection, computerSelection) {
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    console.log("tie");
+    resultArray.push(tieMsg);
     return;
   }
   if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
-    console.log("win");
+    console.log(winMsg);
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
-    console.log("win");
+    console.log(winMsg);
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
-    console.log("win");
+    console.log(winMsg);
     return;
   }
-  console.log("loss");
+  console.log(lossMsg);
+
   return;
 }
