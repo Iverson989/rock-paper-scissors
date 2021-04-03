@@ -20,7 +20,7 @@ const scoreCard = document.querySelector("#score");
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
-scoreCard.style.height = "225px";
+scoreCard.style.height = "325px";
 
 const ol = document.createElement("ol");
 ol.setAttribute("id", "resultList");
