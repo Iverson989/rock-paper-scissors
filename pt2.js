@@ -38,9 +38,9 @@ document.getElementById("form").appendChild(rock);
 const rockButton = document.getElementById("rock");
 rockButton.style.margin = "10px";
 rockButton.style.color = "red";
-rockButton.addEventListener("click", () => {
-  playRound(rockButton.textContent, computerPlay());
-});
+// rockButton.addEventListener("click", () => {
+//   playRound(rockButton.textContent, computerPlay());
+// });
 
 const paper = document.createElement("BUTTON");
 paper.textContent = "Paper";
@@ -50,9 +50,9 @@ document.getElementById("form").appendChild(paper);
 const paperButton = document.getElementById("paper");
 paperButton.style.margin = "10px";
 paperButton.style.color = "white";
-paperButton.addEventListener("click", () => {
-  playRound(paperButton.textContent, computerPlay());
-});
+// paperButton.addEventListener("click", () => {
+//   playRound(paperButton.textContent, computerPlay());
+// });
 
 const scissors = document.createElement("BUTTON");
 scissors.textContent = "Scissors";
@@ -62,8 +62,15 @@ document.getElementById("form").appendChild(scissors);
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
-scissorsButton.addEventListener("click", () => {
-  playRound(scissorsButton.textContent, computerPlay());
+// scissorsButton.addEventListener("click", () => {
+//   playRound(scissorsButton.textContent, computerPlay());
+// });
+
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    playRound(button.textContent, computerPlay());
+  });
 });
 
 function computerPlay() {
