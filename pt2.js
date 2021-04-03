@@ -17,10 +17,10 @@ const div = document.createElement("div");
 div.setAttribute("id", "score");
 document.body.appendChild(div);
 const scoreCard = document.querySelector("#score");
-scoreCard.textContent = "results of rounds go here";
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
+scoreCard.style.height = "225px";
 
 const ol = document.createElement("ol");
 ol.setAttribute("id", "resultList");
@@ -30,6 +30,10 @@ const results = document.querySelector("#resultList");
 const bDiv = document.createElement("div");
 bDiv.setAttribute("id", "bDiv");
 document.body.appendChild(bDiv);
+const buttonDiv = document.querySelector("#bDiv");
+buttonDiv.style.width = "439px";
+buttonDiv.style.display = "flex";
+buttonDiv.style.justifyContent = "space-around";
 
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
