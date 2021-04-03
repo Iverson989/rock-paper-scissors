@@ -22,49 +22,32 @@ scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
 
-const form = document.createElement("form");
-form.setAttribute("id", "form");
-document.body.appendChild(form);
-const bForm = document.querySelector("#form");
-bForm.style.width = "500px";
-bForm.style.display = "flex";
-bForm.style.justifyContent = "center";
-
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
 rock.className = "button";
 rock.setAttribute("id", "rock");
-document.getElementById("form").appendChild(rock);
+document.body.appendChild(rock);
 const rockButton = document.getElementById("rock");
 rockButton.style.margin = "10px";
 rockButton.style.color = "red";
-// rockButton.addEventListener("click", () => {
-//   playRound(rockButton.textContent, computerPlay());
-// });
 
 const paper = document.createElement("BUTTON");
 paper.textContent = "Paper";
 paper.className = "button";
 paper.setAttribute("id", "paper");
-document.getElementById("form").appendChild(paper);
+document.body.appendChild(paper);
 const paperButton = document.getElementById("paper");
 paperButton.style.margin = "10px";
 paperButton.style.color = "white";
-// paperButton.addEventListener("click", () => {
-//   playRound(paperButton.textContent, computerPlay());
-// });
 
 const scissors = document.createElement("BUTTON");
 scissors.textContent = "Scissors";
 scissors.className = "button";
 scissors.setAttribute("id", "scissors");
-document.getElementById("form").appendChild(scissors);
+document.body.appendChild(scissors);
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
-// scissorsButton.addEventListener("click", () => {
-//   playRound(scissorsButton.textContent, computerPlay());
-// });
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
@@ -86,11 +69,12 @@ function computerPlay() {
 let winMsg = "You've Won this Round!";
 let lossMsg = "You Lost this Round!";
 let tieMsg = "It's a Tie, no points awarded!";
+
 function playRound(playerSelection, computerSelection) {
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    resultArray.push(tieMsg);
+    console.log(tieMsg);
     return;
   }
   if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
