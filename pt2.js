@@ -2,7 +2,7 @@ document.body.style.display = "flex";
 document.body.style.justifyContent = "center";
 document.body.style.flexWrap = "wrap";
 document.body.style.width = "440px";
-document.body.style.marginTop = "10vh";
+document.body.style.marginTop = "5vh";
 
 const header1 = document.createElement("h1");
 header1.setAttribute("id", "h1");
@@ -22,11 +22,20 @@ scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
 
+const ol = document.createElement("ol");
+ol.setAttribute("id", "resultList");
+document.getElementById("score").appendChild(ol);
+const results = document.querySelector("#resultList");
+
+const bDiv = document.createElement("div");
+bDiv.setAttribute("id", "bDiv");
+document.body.appendChild(bDiv);
+
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
 rock.className = "button";
 rock.setAttribute("id", "rock");
-document.body.appendChild(rock);
+document.getElementById("bDiv").appendChild(rock);
 const rockButton = document.getElementById("rock");
 rockButton.style.margin = "10px";
 rockButton.style.color = "red";
@@ -35,7 +44,7 @@ const paper = document.createElement("BUTTON");
 paper.textContent = "Paper";
 paper.className = "button";
 paper.setAttribute("id", "paper");
-document.body.appendChild(paper);
+document.getElementById("bDiv").appendChild(paper);
 const paperButton = document.getElementById("paper");
 paperButton.style.margin = "10px";
 paperButton.style.color = "white";
@@ -44,7 +53,7 @@ const scissors = document.createElement("BUTTON");
 scissors.textContent = "Scissors";
 scissors.className = "button";
 scissors.setAttribute("id", "scissors");
-document.body.appendChild(scissors);
+document.getElementById("bDiv").appendChild(scissors);
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
@@ -71,25 +80,30 @@ let lossMsg = "You Lost this Round!";
 let tieMsg = "It's a Tie, no points awarded!";
 
 function playRound(playerSelection, computerSelection) {
+  const li = document.createElement("li");
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    console.log(tieMsg);
+    li.textContent = tieMsg;
+    results.appendChild(li);
     return;
   }
   if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
-    console.log(winMsg);
+    li.textContent = winMsg;
+    results.appendChild(li);
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
-    console.log(winMsg);
+    li.textContent = winMsg;
+    results.appendChild(li);
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
-    console.log(winMsg);
+    li.textContent = winMsg;
+    results.appendChild(li);
     return;
   }
-  console.log(lossMsg);
-
+  li.textContent = lossMsg;
+  results.appendChild(li);
   return;
 }
