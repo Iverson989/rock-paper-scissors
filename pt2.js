@@ -32,7 +32,7 @@ const scoreCard = document.querySelector("#score");
 scoreCard.style.display = "flex";
 scoreCard.style.justifyContent = "center";
 scoreCard.style.backgroundColor = "black";
-scoreCard.style.color = "mistyrose";
+scoreCard.style.color = "turquoise";
 scoreCard.style.justifyContent = "center";
 
 const ol = document.createElement("ol");
