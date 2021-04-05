@@ -22,6 +22,18 @@ scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
 scoreCard.style.height = "325px";
 
+let playerScore = 0;
+let compScore = 0;
+
+const scoreDiv = document.createElement("div");
+scoreDiv.setAttribute("id", "scoreElement");
+document.getElementById("score").appendChild(scoreDiv);
+const points = document.querySelector("#scoreElement");
+points.textContent = `${playerScore} vs ${compScore}`;
+points.style.fontSize = "26px";
+points.style.fontWeight = "bold";
+points.style.color = "red";
+
 const ol = document.createElement("ol");
 ol.setAttribute("id", "resultList");
 document.getElementById("score").appendChild(ol);
@@ -61,9 +73,6 @@ document.getElementById("bDiv").appendChild(scissors);
 const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
-
-let playerScore = 0;
-let compScore = 0;
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
