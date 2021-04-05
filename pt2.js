@@ -62,6 +62,9 @@ const scissorsButton = document.getElementById("scissors");
 scissorsButton.style.margin = "10px";
 scissorsButton.style.color = "dodgerblue";
 
+let playerScore = 0;
+let compScore = 0;
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -79,35 +82,39 @@ function computerPlay() {
   return "Scissors";
 }
 
-let winMsg = "You've Won this Round!";
-let lossMsg = "You Lost this Round!";
-let tieMsg = "It's a Tie, no points awarded!";
+const winMsg = "You've Won this Round!";
+const lossMsg = "You Lost this Round!";
+const tieMsg = "It's a Tie, no points awarded!";
 
 function playRound(playerSelection, computerSelection) {
   const li = document.createElement("li");
   let playerSelection1 = playerSelection.toLowerCase();
   let computerSelection1 = computerSelection.toLowerCase();
   if (playerSelection1 === computerSelection1) {
-    li.textContent = tieMsg;
+    li.textContent = `${tieMsg}`;
     results.appendChild(li);
     return;
   }
   if (playerSelection1 === "rock" && computerSelection1 === "scissors") {
-    li.textContent = winMsg;
+    li.textContent = `${winMsg}`;
     results.appendChild(li);
+    playerScore++;
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
-    li.textContent = winMsg;
+    li.textContent = `${winMsg}`;
     results.appendChild(li);
+    playerScore++;
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
-    li.textContent = winMsg;
+    li.textContent = `${winMsg}`;
     results.appendChild(li);
+    playerScore++;
     return;
   }
-  li.textContent = lossMsg;
+  li.textContent = `${lossMsg}`;
   results.appendChild(li);
+  compScore++;
   return;
 }
