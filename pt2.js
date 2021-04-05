@@ -1,4 +1,5 @@
 document.body.style.display = "flex";
+document.body.style.flexDirection = "column";
 document.body.style.justifyContent = "center";
 document.body.style.flexWrap = "wrap";
 document.body.style.width = "440px";
@@ -21,6 +22,7 @@ scoreDiv.setAttribute("id", "scoreElement");
 document.body.appendChild(scoreDiv);
 const points = document.querySelector("#scoreElement");
 points.textContent = `${playerScore} vs ${compScore}`;
+points.style.alignSelf = "center";
 points.style.fontSize = "26px";
 points.style.fontWeight = "bold";
 points.style.color = "red";
@@ -34,7 +36,6 @@ scoreCard.style.justifyContent = "center";
 scoreCard.style.backgroundColor = "black";
 scoreCard.style.color = "mistyrose";
 scoreCard.style.justifyContent = "center";
-scoreCard.style.height = "325px";
 
 const ol = document.createElement("ol");
 ol.setAttribute("id", "resultList");
@@ -48,6 +49,8 @@ const buttonDiv = document.querySelector("#bDiv");
 buttonDiv.style.width = "439px";
 buttonDiv.style.display = "flex";
 buttonDiv.style.justifyContent = "space-around";
+buttonDiv.style.position = "absolute";
+buttonDiv.style.bottom = "5vh";
 
 const rock = document.createElement("BUTTON");
 rock.textContent = "Rock";
