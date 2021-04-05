@@ -94,8 +94,7 @@ function computerPlay() {
   return "Scissors";
 }
 
-const winMsg =
-  "The Challenger has WON? This isn't how it's supposed to happen!";
+const winMsg = "Challenger, you won? This isn't how it's supposed to happen!";
 const lossMsg = "But of course, the Champion is expected to win!!!";
 const tieMsg =
   "The Champion's strategy to read your mind forced another Round!";
@@ -114,6 +113,7 @@ function playRound(playerSelection, computerSelection) {
     results.appendChild(li);
     playerScore++;
     points.textContent = `${playerScore} vs ${compScore}`;
+    endGame(playerScore, compScore);
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
@@ -121,6 +121,7 @@ function playRound(playerSelection, computerSelection) {
     results.appendChild(li);
     playerScore++;
     points.textContent = `${playerScore} vs ${compScore}`;
+    endGame(playerScore, compScore);
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
@@ -128,11 +129,41 @@ function playRound(playerSelection, computerSelection) {
     results.appendChild(li);
     playerScore++;
     points.textContent = `${playerScore} vs ${compScore}`;
+    endGame(playerScore, compScore);
     return;
   }
   li.textContent = `${lossMsg}`;
   results.appendChild(li);
   compScore++;
   points.textContent = `${playerScore} vs ${compScore}`;
+  endGame(playerScore, compScore);
   return;
+}
+
+const newChamp = `WE HAVE A NEW CHAMPION!!!`;
+const noChamp = `Our Champion AI has achieved another victory! Travel some more, you need to level up your skills...`;
+function endGame(pScore, compScore) {
+  if (pScore == 5 || compScore == 5) {
+    points.style.color = "gold";
+    if (pScore == 5) {
+      points.textContent = newChamp;
+    } else {
+      points.textContent = noChamp;
+    }
+    buttons.forEach((button) => {
+      button.style.visibility = "hidden";
+    });
+
+    const retry = document.createElement("BUTTON");
+    retry.textContent = "GO TO NEXT ARENA?";
+    retry.className = "button";
+    retry.setAttribute("id", "retry");
+    document.getElementById("bDiv").appendChild(retry);
+    const retryBtn = document.getElementById("retry");
+    retry.style.color = "limegreen";
+    retryBtn.style.fontSize = "32px";
+    retry.addEventListener("click", () => {
+      window.location.reload(true);
+    });
+  }
 }
