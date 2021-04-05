@@ -2,7 +2,6 @@ document.body.style.display = "flex";
 document.body.style.flexDirection = "column";
 document.body.style.justifyContent = "center";
 document.body.style.flexWrap = "wrap";
-document.body.style.width = "440px";
 document.body.style.marginTop = "5vh";
 
 const header1 = document.createElement("h1");
@@ -16,7 +15,6 @@ h1.style.textAlign = "center";
 
 let playerScore = 0;
 let compScore = 0;
-
 const scoreDiv = document.createElement("div");
 scoreDiv.setAttribute("id", "scoreElement");
 document.body.appendChild(scoreDiv);
@@ -96,9 +94,11 @@ function computerPlay() {
   return "Scissors";
 }
 
-const winMsg = "You've Won this Round!";
-const lossMsg = "You Lost this Round!";
-const tieMsg = "It's a Tie, no points awarded!";
+const winMsg =
+  "The Challenger has WON? This isn't how it's supposed to happen!";
+const lossMsg = "But of course, the Champion is expected to win!!!";
+const tieMsg =
+  "The Champion's strategy to read your mind forced another Round!";
 
 function playRound(playerSelection, computerSelection) {
   const li = document.createElement("li");
