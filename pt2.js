@@ -13,26 +13,28 @@ h1.style.color = "red";
 h1.style.fontSize = "48px";
 h1.style.textAlign = "center";
 
-const div = document.createElement("div");
-div.setAttribute("id", "score");
-document.body.appendChild(div);
-const scoreCard = document.querySelector("#score");
-scoreCard.style.backgroundColor = "black";
-scoreCard.style.color = "mistyrose";
-scoreCard.style.justifyContent = "center";
-scoreCard.style.height = "325px";
-
 let playerScore = 0;
 let compScore = 0;
 
 const scoreDiv = document.createElement("div");
 scoreDiv.setAttribute("id", "scoreElement");
-document.getElementById("score").appendChild(scoreDiv);
+document.body.appendChild(scoreDiv);
 const points = document.querySelector("#scoreElement");
 points.textContent = `${playerScore} vs ${compScore}`;
 points.style.fontSize = "26px";
 points.style.fontWeight = "bold";
 points.style.color = "red";
+
+const div = document.createElement("div");
+div.setAttribute("id", "score");
+document.body.appendChild(div);
+const scoreCard = document.querySelector("#score");
+scoreCard.style.display = "flex";
+scoreCard.style.justifyContent = "center";
+scoreCard.style.backgroundColor = "black";
+scoreCard.style.color = "mistyrose";
+scoreCard.style.justifyContent = "center";
+scoreCard.style.height = "325px";
 
 const ol = document.createElement("ol");
 ol.setAttribute("id", "resultList");
@@ -108,22 +110,26 @@ function playRound(playerSelection, computerSelection) {
     li.textContent = `${winMsg}`;
     results.appendChild(li);
     playerScore++;
+    points.textContent = `${playerScore} vs ${compScore}`;
     return;
   }
   if (playerSelection1 === "scissors" && computerSelection1 === "paper") {
     li.textContent = `${winMsg}`;
     results.appendChild(li);
     playerScore++;
+    points.textContent = `${playerScore} vs ${compScore}`;
     return;
   }
   if (playerSelection1 === "paper" && computerSelection1 === "rock") {
     li.textContent = `${winMsg}`;
     results.appendChild(li);
     playerScore++;
+    points.textContent = `${playerScore} vs ${compScore}`;
     return;
   }
   li.textContent = `${lossMsg}`;
   results.appendChild(li);
   compScore++;
+  points.textContent = `${playerScore} vs ${compScore}`;
   return;
 }
