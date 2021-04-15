@@ -32,7 +32,9 @@ const scoreCard = document.querySelector("#score");
 scoreCard.style.display = "flex";
 scoreCard.style.justifyContent = "center";
 scoreCard.style.backgroundColor = "black";
-scoreCard.style.color = "turquoise";
+scoreCard.style.color = "orange";
+scoreCard.style.fontSize = "larger";
+scoreCard.style.fontWeight = "bold";
 scoreCard.style.justifyContent = "center";
 
 const ol = document.createElement("ol");
@@ -96,8 +98,7 @@ function computerPlay() {
 
 const winMsg = "Challenger, you won? This isn't how it's supposed to happen!";
 const lossMsg = "But of course, the Champion is expected to win!!!";
-const tieMsg =
-  "The Champion's strategy to read your mind forced another Round!";
+const tieMsg = "The AI read your mind to force a draw, Play another Round!";
 
 function playRound(playerSelection, computerSelection) {
   const li = document.createElement("li");
